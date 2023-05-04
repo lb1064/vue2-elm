@@ -43,7 +43,6 @@
 <script>
 import headTop from '../../components/header/head'
 import {cityGuess, hotcity, groupcity} from '../../service/getData'
-//测试
 export default {
     data(){
         return{
@@ -51,6 +50,7 @@ export default {
             guessCityid: '', //当前城市id
             hotcity: [],     //热门城市列表
             groupcity: {},   //所有城市列表
+            ciyt:[]
         }
     },
 
@@ -64,6 +64,7 @@ export default {
         //获取热门城市
         hotcity().then(res => {
             this.hotcity = res;
+            this.city = res.data.list
         })
 
         //获取所有城市
