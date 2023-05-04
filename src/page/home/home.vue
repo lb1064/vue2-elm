@@ -43,7 +43,7 @@
 <script>
 import headTop from '../../components/header/head'
 import {cityGuess, hotcity, groupcity} from '../../service/getData'
-
+//测试
 export default {
     data(){
         return{
