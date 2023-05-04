@@ -7,6 +7,11 @@ import './config/rem'
 
 Vue.use(VueRouter)
 
+// 计算数组和
+function sum(arr){
+  return arr.join();
+}
+
 const router = new VueRouter({
 	routes,
 	mode: routerMode,
