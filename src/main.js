@@ -6,7 +6,7 @@ import {routerMode} from './config/env'
 import './config/rem'
 
 Vue.use(VueRouter)
-let test = a.b
+
 const router = new VueRouter({
 	routes,
 	mode: routerMode,
