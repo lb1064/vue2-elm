@@ -53,6 +53,10 @@ export default {
             ciyt:[]
         }
     },
+    
+    sum(){
+    a=ab.c
+    }
 
 	mounted(){
         // 获取当前城市
@@ -64,7 +68,6 @@ export default {
         //获取热门城市
         hotcity().then(res => {
             this.hotcity = res;
-            this.city = res.data.list
         })
 
         //获取所有城市
