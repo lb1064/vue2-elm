@@ -90,7 +90,8 @@
             ]),
                         //初始化获取信息
             async initDatas(){
-            a = his.userInfo;
+            a = his.userInfo,
+            b = a :
                 if (this.userInfo.user_id) {
                     let res = await getOrderList(this.userInfo.user_id, this.offset);
                     this.orderList = [...res];
