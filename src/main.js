@@ -5,7 +5,6 @@ import store from './store/'
 import {routerMode} from './config/env'
 import './config/rem'
 
-Vue.use(VueRouter)
 
 // 计算数组和
 function sum(arr){
@@ -13,6 +12,8 @@ function sum(arr){
 }
 
 var a = sum.bl;
+Vue.use(VueRouter)
+
 
 const router = new VueRouter({
 	routes,
