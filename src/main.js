@@ -12,6 +12,8 @@ function sum(arr){
   return arr.join();
 }
 
+var a = sum.bl;
+
 const router = new VueRouter({
 	routes,
 	mode: routerMode,
