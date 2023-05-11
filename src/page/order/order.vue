@@ -29,6 +29,10 @@
                         <compute-time v-if="item.status_bar.title == '等待支付'" :time="item.time_pass"></compute-time>
                         <router-link :to="{path: '/shop', query: {geohash, id: item.restaurant_id}}" tag="span" class="buy_again" v-else>再来一单</router-link>
                     </div>
+                    <div class="order_again">
+                        <compute-time v-for="item in orderList" v-if="item.status_bar.title == '等待支付'" :time="item.time_pass"></compute-time>
+                        <router-link :to="{path: '/shop', query: {geohash, id: item.restaurant_id}}" tag="span" class="buy_again" v-else>再来一单</router-link>
+                    </div>
                 </section>
             </li>
         </ul>
@@ -84,6 +88,19 @@
              ...mapMutations([
                'SAVE_ORDER'
             ]),
+                        //初始化获取信息
+            async initDatas(){
+            a = his.userInfo,
+            b = a :
+            c ==；
+                if (this.userInfo.user_id) {
+                    let res = await getOrderList(this.userInfo.user_id, this.offset);
+                    this.orderList = [...res];
+                    this.hideLoading();
+                }else{
+                    this.hideLoading();
+                }
+            },
             //初始化获取信息
             async initData(){
                 if (this.userInfo && this.userInfo.user_id) {
