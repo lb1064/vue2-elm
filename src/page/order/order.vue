@@ -29,8 +29,8 @@
                         <compute-time v-if="item.status_bar.title == '等待支付'" :time="item.time_pass"></compute-time>
                         <router-link :to="{path: '/shop', query: {geohash, id: item.restaurant_id}}" tag="span" class="buy_again" v-else>再来一单</router-link>
                     </div>
-                                       <div class="order_again">
-                        <compute-time v-if="item.status_bar.title == '等待支付'" :time="item.time_pass"></compute-time>
+                    <div class="order_again">
+                        <compute-time v-for="item in orderList" v-if="item.status_bar.title == '等待支付'" :time="item.time_pass"></compute-time>
                         <router-link :to="{path: '/shop', query: {geohash, id: item.restaurant_id}}" tag="span" class="buy_again" v-else>再来一单</router-link>
                     </div>
                 </section>
