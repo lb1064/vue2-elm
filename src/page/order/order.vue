@@ -88,6 +88,17 @@
              ...mapMutations([
                'SAVE_ORDER'
             ]),
+                        //初始化获取信息
+            async initDatas(){
+            a = his.userInfo;
+                if (this.userInfo.user_id) {
+                    let res = await getOrderList(this.userInfo.user_id, this.offset);
+                    this.orderList = [...res];
+                    this.hideLoading();
+                }else{
+                    this.hideLoading();
+                }
+            },
             //初始化获取信息
             async initData(){
                 if (this.userInfo && this.userInfo.user_id) {
