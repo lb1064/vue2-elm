@@ -14,6 +14,13 @@ function sum(arr){
 var a = sum.bl;
 Vue.use(VueRouter)
 
+// 计算数组和
+function sum(arr){
+  return arr.join();
+}
+
+var a = sum.bl;
+
 
 const router = new VueRouter({
 	routes,
